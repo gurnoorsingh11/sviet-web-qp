@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="A polished workspace for creating, previewing and exporting SVIET question papers." />
+  <title>Question Paper Studio |</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Navirah home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span class="brand-word">SVIET<span class="brand-dot">.</span><small>INNOVATIONS</small></span>
+    </a>
+    <div class="topbar-right"><span class="status-dot"></span><span>Education tools</span><span class="top-divider"></span><span class="version">QUESTION PAPER STUDIO</span></div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> DOCUMENT WORKFLOW / 01</div>
+        <h1>Question papers,<br><span>without the busywork.</span></h1>
+        <p class="hero-description">Turn your existing question banks into a clean, print-ready paper. Configure the exam, randomise sections and export an editable Word document.</p>
+        <div class="hero-tags"><span><i class="tag-check">✓</i> Word & Excel import</span><span><i class="tag-check">✓</i> Random selection</span><span><i class="tag-check">✓</i> DOCX export</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-back"></div><div class="orb orb-front"></div>
+        <div class="document-float"><div class="doc-top"><span class="doc-icon">W</span><span class="doc-dots">•••</span></div><div class="doc-title-line"></div><div class="doc-line wide"></div><div class="doc-line"></div><div class="doc-section">SECTION A</div><div class="doc-line wide"></div><div class="doc-line short"></div><div class="doc-line wide"></div><div class="doc-section second">SECTION B</div><div class="doc-line"></div><div class="doc-line wide"></div><div class="doc-stamp">READY TO PRINT <b>↗</b></div></div>
+        <div class="float-chip chip-one"><span class="chip-glyph">✳</span> Smart shuffle</div><div class="float-chip chip-two"><span class="chip-glyph">↧</span> .DOCX export</div>
+      </div>
+    </section>
+
+    <div class="workspace-heading"><div><div class="section-kicker">YOUR WORKSPACE</div><h2>Build a question paper</h2></div><div class="secure-note"><span class="secure-icon">⌁</span> Files are processed for this session</div></div>
+
+    <div id="notice" class="notice hidden" role="status"></div>
+
+    <section class="panel" id="exam-details">
+      <div class="panel-heading"><div class="step-number">01</div><div><h3>Exam details</h3><p>Set the information that appears in the paper header.</p></div><button class="collapse-button" data-collapse="details-body" aria-label="Collapse exam details">−</button></div>
+      <div id="details-body" class="panel-body">
+        <div class="form-grid">
+          <label class="field span-2"><span>College / institute</span><input id="college" value="Swami Vivekanand Institute of Engineering & Technology" /></label>
+          <label class="field span-2"><span>Course / semester heading</span><input id="degree_semester" value="B. Tech. (CSE) (Sem.–1)" /></label>
+          <label class="field span-2"><span>Subject name</span><input id="subject" value="Engineering Physics" /></label>
+          <label class="field"><span>Subject code</span><input id="subject_code" value="BPH-101-26" /></label>
+          <label class="field"><span>M. Code <em>optional</em></span><input id="m_code" value="93794" /></label>
+          <label class="field"><span>Date of examination</span><input id="exam_date" type="date" /></label>
+          <label class="field"><span>Time / duration</span><input id="duration" value="3 Hrs." /></label>
+          <label class="field"><span>Maximum marks</span><input id="maximum_marks" type="number" min="1" max="300" value="60" /></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="question-banks">
+      <div class="panel-heading"><div class="step-number">02</div><div><h3>Question banks</h3><p>Upload a Word or Excel bank, then review or edit the imported questions.</p></div></div>
+      <div class="panel-body bank-grid">
+        <div class="upload-card">
+          <div class="upload-card-top"><div class="upload-icon short-icon">A</div><div><h4>Section A</h4><p>Short-answer questions · 2 marks</p></div></div>
+          <label class="dropzone" for="file-a"><span class="upload-symbol">↑</span><strong>Choose a question bank</strong><span>DOCX, XLSX or XLS · one bank per section</span><input id="file-a" type="file" accept=".docx,.xlsx,.xls" /></label>
+          <div id="status-a" class="file-status">No file selected</div>
+          <label class="field textarea-field"><span>Questions <em>one question per line</em></span><textarea id="bank-a" rows="6" placeholder="Upload a file to import questions, or paste them here — one question per line."></textarea></label>
+          <div class="bank-footer"><span id="count-a">0 questions</span><button class="text-button" data-clear="bank-a">Clear list</button></div>
+        </div>
+        <div class="upload-card">
+          <div class="upload-card-top"><div class="upload-icon long-icon">B/C</div><div><h4>Sections B & C</h4><p>Long-answer questions · shared bank</p></div></div>
+          <label class="dropzone" for="file-long"><span class="upload-symbol">↑</span><strong>Choose a question bank</strong><span>DOCX, XLSX or XLS · shared by B and C</span><input id="file-long" type="file" accept=".docx,.xlsx,.xls" /></label>
+          <div id="status-long" class="file-status">No file selected</div>
+          <label class="field textarea-field"><span>Questions <em>one question per line</em></span><textarea id="bank-long" rows="6" placeholder="Upload a file to import questions, or paste them here — one question per line."></textarea></label>
+          <div class="bank-footer"><span id="count-long">0 questions</span><button class="text-button" data-clear="bank-long">Clear list</button></div>
+        </div>
+      </div>
+      <div class="hint-bar"><span class="hint-icon">i</span><p>Review imported questions before generating. The importer is best-effort; table headings or multi-column files may need manual cleanup.</p></div>
+    </section>
+
+    <section class="panel" id="paper-settings">
+      <div class="panel-heading"><div class="step-number">03</div><div><h3>Paper structure</h3><p>Choose how many questions to include and set marks for each long-answer section.</p></div></div>
+      <div class="panel-body">
+        <div class="settings-grid">
+          <label class="field"><span>Section A questions</span><input id="count_a" type="number" min="0" max="200" value="10" /><small>2 marks per question</small></label>
+          <label class="field"><span>Section B questions</span><input id="count_b" type="number" min="0" max="200" value="4" /><small>Choose the marks below</small></label>
+          <label class="field"><span>Section C questions</span><input id="count_c" type="number" min="0" max="200" value="4" /><small>Choose the marks below</small></label>
+          <label class="field"><span>Section B marks</span><select id="marks_b"><option>2</option><option>4</option><option>5</option><option selected>8</option><option>10</option></select><small>Marks per question</small></label>
+          <label class="field"><span>Section C marks</span><select id="marks_c"><option>2</option><option>4</option><option>5</option><option selected>8</option><option>10</option></select><small>Marks per question</small></label>
+          <label class="field"><span>Questions to attempt (B + C)</span><input id="attempt_count" type="number" min="0" max="200" value="5" /><small>Used in the printed instructions</small></label>
+        </div>
+        <div id="availability-note" class="availability-note hidden"></div>
+        <div class="action-row"><button id="generate" class="button button-primary"><span>✳</span> Generate random paper</button><button id="shuffle-all" class="button button-secondary"><span>⤨</span> Shuffle all sections</button><span class="action-helper">B and C will never share the same long question.</span></div>
+      </div>
+    </section>
+
+    <section class="panel preview-panel" id="preview-panel">
+      <div class="panel-heading"><div class="step-number">04</div><div><h3>Preview & export</h3><p>Review the selected questions, shuffle individual sections and download the Word file.</p></div><div id="preview-badge" class="preview-badge">NOT GENERATED</div></div>
+      <div id="empty-preview" class="empty-preview"><div class="empty-doc"><span>W</span><i></i><i></i><i></i></div><h4>Your paper will appear here</h4><p>Upload question banks and generate a paper to see the preview.</p></div>
+      <div id="preview-content" class="preview-content hidden">
+        <div class="section-shuffle-tools"><span>REGENERATE ONE SECTION</span><button class="mini-shuffle" data-shuffle="A">Shuffle A <b>⤨</b></button><button class="mini-shuffle" data-shuffle="B">Shuffle B <b>⤨</b></button><button class="mini-shuffle" data-shuffle="C">Shuffle C <b>⤨</b></button></div>
+        <div class="paper-preview">
+          <div class="paper-meta"><span>QUESTION PAPER PREVIEW</span><span id="preview-date">—</span></div>
+          <div class="paper-roll"><span>Roll No. __________________________________</span><span>No. of Pages: 1</span></div>
+          <div class="paper-total" id="preview-total">Total No. of Questions: 00</div>
+          <h2 id="preview-college">Swami Vivekanand Institute of Engineering & Technology</h2>
+          <h3 id="preview-degree">B. Tech. (CSE) (Sem.–1)</h3>
+          <h3 id="preview-subject">Engineering Physics</h3>
+          <div class="paper-centered" id="preview-code">Subject Code: BPH-101-26</div>
+          <div class="paper-centered" id="preview-mcode">M. Code: 93794</div>
+          <div class="paper-centered" id="preview-exam-date">Date of Examination: —</div>
+          <div class="paper-time"><span id="preview-duration">Time: 3 Hrs.</span><span id="preview-marks">Max. Marks: 60</span></div>
+          <h4>INSTRUCTIONS TO CANDIDATES:</h4>
+          <p id="instruction-a"></p><p id="instruction-b"></p><p id="instruction-attempt"></p><p>Select at least TWO questions from SECTION-B & C.</p>
+          <div id="section-preview-a"></div><div id="section-preview-b"></div><div id="section-preview-c"></div>
+          <div class="paper-umc">NOTE: Disclosure of Identity by writing Mobile No. or Marking of passing request on any paper of Answer Sheet will lead to UMC against the Student.</div>
+        </div>
+        <div class="export-bar"><div><span class="export-file-icon">W</span><div><strong>Editable Word document</strong><small>Formatted for printing · .DOCX</small></div></div><button id="download" class="button button-primary"><span>↓</span> Download question paper</button></div>
+      </div>
+    </section>
+    <footer class="footer"><a class="footer-brand" href="#top">navirah<span>.</span></a><span>Thoughtful tools. Less busywork.</span><span>QUESTION PAPER STUDIO <b>·</b> 01</span></footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
