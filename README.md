@@ -1,6 +1,6 @@
-# Navirah Question Paper Studio
+# SVIET Question Paper Studio
 
-A web version of the supplied SVIET Question Paper Generator. It replaces Streamlit's interface with a responsive Navirah-inspired dark navy / cyan workspace, while keeping the original Python question parsing and Word-document generation logic in the backend.
+A web version of the supplied SVIET Question Paper Generator. It replaces Streamlit's interface with a responsive SVIET-inspired dark navy / cyan workspace, while keeping the original Python question parsing and Word-document generation logic in the backend.
 
 ## Features
 
@@ -52,7 +52,7 @@ This project is a single FastAPI service that serves both the webpage and API. I
    - **Start command:** `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
 4. Deploy. Open the service URL; the webpage and `/api/health` are served by the same app.
 
-For an existing Navirah website, this can be deployed as a separate tool route/subdomain or the frontend can be integrated into the existing Next.js project. The uploaded ZIP did not include the Navirah website source, so this is a standalone Navirah-inspired page rather than a direct modification of the original Navirah repository.
+For an existing SVIET website, this can be deployed as a separate tool route/subdomain or the frontend can be integrated into the existing Next.js project. The uploaded ZIP did not include the SVIET website source, so this is a standalone SVIET-inspired page rather than a direct modification of the original SVIET repository.
 
 ## Important notes
 
@@ -66,7 +66,7 @@ For an existing Navirah website, this can be deployed as a separate tool route/s
 ## Project structure
 
 ```text
-navirah_qp_web/
+SVIET_qp_web/
 ├── backend/
 │   ├── main.py
 │   └── requirements.txt

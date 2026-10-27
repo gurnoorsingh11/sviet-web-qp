@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: navirah-question-paper-studio
+    name: sviet-question-paper-studio
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT

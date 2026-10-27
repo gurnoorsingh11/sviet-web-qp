@@ -24,7 +24,7 @@ MARK_OPTIONS = [2, 4, 5, 8, 10]
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
 
-app = FastAPI(title="Navirah Question Paper Studio", version="1.0.0")
+app = FastAPI(title="SVIET Question Paper Studio", version="1.0.0")
 
 
 # -------------------- Source question-bank logic --------------------
@@ -248,7 +248,7 @@ class PaperRequest(BaseModel):
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "app": "Navirah Question Paper Studio"}
+    return {"status": "ok", "app": "SVIET Question Paper Studio"}
 
 
 @app.get("/api/config")
